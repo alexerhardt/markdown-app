@@ -7,13 +7,13 @@ class MainPane extends React.Component
     {
         return (
             <div className="main-pane-wrapper">
-                <div className="sub-pane-wrapper sub-pane-editor">
-                    <div id="editor">Editor</div>
+                <div className="sub-pane-text sub-pane-editor">
+                    <div id="editor" className="slide-in-left">Editor</div>
                 </div>
-                <div className="sub-pane-wrapper sub-pane-preview">
-                    <div id="preview"></div>
+                <div className="sub-pane-text sub-pane-preview">
+                    <div id="preview" className="slide-up">Preview</div>
                 </div>
-                <div className="sub-pane-wrapper sub-pane-button">
+                <div className="sub-pane-button">
                     <ToggleButton />
                 </div>
             </div>

@@ -1,0 +1,36 @@
+.sub-pane-text {
+    height: $pane-height-mobile;
+    overflow: hidden;
+}
+
+.sub-pane-text {
+    overflow: hidden;
+}
+
+.slide-in-left {
+    height: 100%;
+    background-color: lightblue;
+    animation-name: slideup;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transform: translateX(100%);
+}
+
+@keyframes slideup {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.sub-pane-preview {
+    background-color: lightcoral;
+    display: none;
+}
+
+.sub-pane-button {
+    height: $toggle-button-height;
+}

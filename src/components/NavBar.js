@@ -6,7 +6,9 @@ class NavBar extends React.Component
     {
         return (
             <div className="nav-bar">
-                <p>tiny.md</p>
+                <div>
+                    <p className="mt-0">tiny.md</p>
+                </div>
             </div>
         )
     }

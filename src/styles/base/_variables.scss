@@ -1,0 +1,3 @@
+$navbar-height: 2.5rem;
+$toggle-button-height: 2.5rem;
+$pane-height-mobile: calc(100vh - #{$navbar-height} - #{$toggle-button-height});
