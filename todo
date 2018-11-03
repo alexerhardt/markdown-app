@@ -1,0 +1,12 @@
+- Create a simple frame that works for both mobile and desktop
+    - Desktop: simple, split down the middle
+    - Mobile: vertical accordion
+
+- Import markdown.js
+
+- Add default text and rendering on the HTML
+
+- When user clicks on default text, all text is cleared
+
+- As user types, state is updated, passed to the rendering window
+
