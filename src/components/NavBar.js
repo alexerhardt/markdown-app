@@ -1,4 +1,5 @@
 import React from 'react';
+import ToggleButton from './ToggleButton';
 
 class NavBar extends React.Component 
 {
@@ -6,9 +7,11 @@ class NavBar extends React.Component
     {
         return (
             <div className="nav-bar">
-                <div>
-                    <p className="mt-0">tiny.md</p>
-                </div>
+                <p className="logo mt-0">tiny.md</p>
+                <p className="sub-title">A simple Markdown editor, by Alex Erhardt</p>
+                <ToggleButton 
+                    handleToggleClick={this.props.handleToggleClick}
+                />
             </div>
         )
     }

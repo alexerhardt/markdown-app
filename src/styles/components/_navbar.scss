@@ -1,5 +1,23 @@
 .nav-bar {
     height: $navbar-height;
+    line-height: $navbar-height;
     width: 100%;
     background-color: darkcyan;
+}
+
+.nav-bar > p {
+    display: inline;
+    color: white;
+}
+
+.logo {
+    margin-left: 1.5rem;
+    font-family: 'Open Sans';
+    font-size: 1.5rem;
+}
+
+.sub-title {
+    margin-left: 1.5rem;
+    font-family: 'Lato';
+    font-weight: 300;
 }

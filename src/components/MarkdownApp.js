@@ -23,7 +23,7 @@ class MarkdownApp extends React.Component
     {
         return (
             <div className="wrapper-outermost">
-                <NavBar />
+                <NavBar handleToggleClick={this.handleToggleClick}/>
                 <MainPane 
                     windowPosition={this.state.windowPosition} 
                     handleToggleClick={this.handleToggleClick}

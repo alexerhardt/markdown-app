@@ -1,6 +1,6 @@
-$navbar-height: 2.5rem;
+$navbar-height: 2.75rem;
 $toggle-button-height: 2.5rem;
-$pane-height-mobile: calc(100vh - #{$navbar-height} - #{$toggle-button-height});
+$pane-height-mobile: calc(100vh - #{$navbar-height});
 
 $text-pane-margin-top: 20%;
 $text-pane-margin-side: 20%;

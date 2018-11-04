@@ -7,7 +7,9 @@ class ToggleButton extends React.Component
         return (
             <button 
                 onClick={this.props.handleToggleClick}
-                className="toggle-btn">Toggle Pane
+                className="toggle-btn"
+            >
+                Switch Editor Mode
             </button>
         )
     }
