@@ -7,5 +7,9 @@ $text-pane-margin-side: 20%;
 $text-pane-width: calc(100% - #{$text-pane-margin-top});
 $text-pane-height: calc(100% - #{$text-pane-margin-side});
 
+$editor-max-width: 800px;
+
 $sub-pane-preview-bg-color: lightcoral;
 $sub-pane-editor-bg-color: lightblue;
+
+$pane-slide-anim-duration: 1s;

@@ -1,19 +1,18 @@
 import React from 'react';
 import NavBar from './NavBar';
 import MainPane from './MainPane';
+const marked = require('marked');
 
 class MarkdownApp extends React.Component
 {
     state = {
-        windowPosition: MainPane.windowStates.INIT 
+        windowPosition: MainPane.windowStates.INIT,
     }
 
     handleToggleClick = () => {
-        console.log("handleToggleClick fired");
         const wstates = MainPane.windowStates;
         const oldPos = this.state.windowPosition;
         const newPos = oldPos ==  wstates.LEFT ? wstates.RIGHT : wstates.LEFT;
-        console.log("oldPos: " + oldPos + " newPos: " + newPos);
     
         this.setState(() => ({
             windowPosition: newPos
@@ -23,7 +22,6 @@ class MarkdownApp extends React.Component
     render()
     {
         return (
-
             <div className="wrapper-outermost">
                 <NavBar />
                 <MainPane 

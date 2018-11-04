@@ -1,21 +1,50 @@
 import React from 'react';
 import ToggleButton from './ToggleButton';
+const marked = require('marked');
 
 class MainPane extends React.Component
 {
+    FIRST_TIME = 1;
+
+    state = {
+        editorValue: "**Hello**, this is Alex!",
+    }
+
+    createMarkup = (string) => {
+        return {__html: marked(string)};
+    }
+
+    handleEditorFocus = () => {
+        if (this.FIRST_TIME) {
+            this.FIRST_TIME = 0;
+            this.setState(() => ({
+                editorValue: ""
+            }));
+        }
+    }
+
+    handleEditorChange = (event) => {
+        this.setState({editorValue: event.target.value});
+    }
+
     render()
     {
         return (
             <div className="main-pane-wrapper">
                 <div id="sliding-window" className={this.props.windowPosition}>
                     <div className="sub-pane-text sub-pane-editor">
-                        <textarea id="editor">
-                            Editor
-                            Hello world
+                        <textarea 
+                            id="editor"
+                            value={this.state.editorValue}
+                            onFocus={this.handleEditorFocus}
+                            onChange={this.handleEditorChange}
+                        >
                         </textarea>
                     </div>
                     <div className="sub-pane-text sub-pane-preview">
-                        <div id="preview">Preview</div>
+                        <div id="preview" 
+                             dangerouslySetInnerHTML={this.createMarkup(this.state.editorValue)}>
+                        </div>
                     </div>
                 </div>
                 <div className="sub-pane-button">

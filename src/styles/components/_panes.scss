@@ -33,7 +33,7 @@
 }
 
 #editor {
-    max-width: 800px;
+    max-width: $editor-max-width;
 }
 
 .sub-pane-editor {
@@ -49,7 +49,7 @@
 }
 
 div[class*="slide-"] {
-    animation-duration: 1s;
+    animation-duration: $pane-slide-anim-duration;
     animation-fill-mode: forwards;
 }
 
