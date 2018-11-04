@@ -7,18 +7,29 @@ class MainPane extends React.Component
     {
         return (
             <div className="main-pane-wrapper">
-                <div className="sub-pane-text sub-pane-editor">
-                    <div id="editor" className="slide-in-left">Editor</div>
-                </div>
-                <div className="sub-pane-text sub-pane-preview">
-                    <div id="preview" className="slide-up">Preview</div>
+                <div id="sliding-window" className={this.props.windowPosition}>
+                    <div className="sub-pane-text sub-pane-editor">
+                        <div id="editor">Editor</div>
+                    </div>
+                    <div className="sub-pane-text sub-pane-preview">
+                        <div id="preview">Preview</div>
+                    </div>
                 </div>
                 <div className="sub-pane-button">
-                    <ToggleButton />
+                    <ToggleButton 
+                        handleToggleClick={this.props.handleToggleClick}
+                    />
                 </div>
             </div>
         )
     }
 }
+
+const windowStates = {
+    INIT: "",
+    LEFT: "slide-left",
+    RIGHT: "slide-right"
+};
+MainPane.windowStates = windowStates;
 
 export default MainPane;

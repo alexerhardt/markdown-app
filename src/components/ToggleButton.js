@@ -5,7 +5,10 @@ class ToggleButton extends React.Component
     render()
     {
         return (
-            <button className="toggle-btn">Toggle Pane</button>
+            <button 
+                onClick={this.props.handleToggleClick}
+                className="toggle-btn">Toggle Pane
+            </button>
         )
     }
 }

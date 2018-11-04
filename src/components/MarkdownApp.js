@@ -4,12 +4,32 @@ import MainPane from './MainPane';
 
 class MarkdownApp extends React.Component
 {
+    state = {
+        windowPosition: MainPane.windowStates.INIT 
+    }
+
+    handleToggleClick = () => {
+        console.log("handleToggleClick fired");
+        const wstates = MainPane.windowStates;
+        const oldPos = this.state.windowPosition;
+        const newPos = oldPos ==  wstates.LEFT ? wstates.RIGHT : wstates.LEFT;
+        console.log("oldPos: " + oldPos + " newPos: " + newPos);
+    
+        this.setState(() => ({
+            windowPosition: newPos
+        }));
+    }
+
     render()
     {
         return (
+
             <div className="wrapper-outermost">
                 <NavBar />
-                <MainPane />
+                <MainPane 
+                    windowPosition={this.state.windowPosition} 
+                    handleToggleClick={this.handleToggleClick}
+                />
             </div>
         )
     }

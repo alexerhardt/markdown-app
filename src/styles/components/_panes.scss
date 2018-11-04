@@ -1,36 +1,58 @@
-.sub-pane-text {
-    height: $pane-height-mobile;
+.main-pane-wrapper {
+   width: 100%;
+   overflow: hidden;
+}
+
+#sliding-window {
+    width: 200%;
     overflow: hidden;
 }
 
 .sub-pane-text {
-    overflow: hidden;
+    display: inline-block;
+    width: 50%;
 }
 
-.slide-in-left {
-    height: 100%;
-    background-color: lightblue;
-    animation-name: slideup;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    transform: translateX(100%);
-}
-
-@keyframes slideup {
-    from {
-        transform: translateX(100%);
-    }
-
-    to {
-        transform: translateX(0%);
-    }
+.sub-pane-editor {
+    // display: none;
 }
 
 .sub-pane-preview {
+}
+
+#editor {
+    background-color: lightblue;
+    height: $pane-height-mobile;
+}
+
+#preview {
     background-color: lightcoral;
-    display: none;
+    height: $pane-height-mobile;
 }
 
 .sub-pane-button {
     height: $toggle-button-height;
+}
+
+div[class*="slide-"] {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.slide-left {
+    animation-name: slide-left;
+}
+
+.slide-right {
+    animation-name: slide-right;
+}
+
+@keyframes slide-left {
+    from {  transform: translateX(0%); }
+    to { transform: translateX(-50%); }
+}
+
+@keyframes slide-right {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0%); }
 }
