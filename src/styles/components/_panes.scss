@@ -4,30 +4,50 @@
 }
 
 #sliding-window {
+    height: $pane-height-mobile;
     width: 200%;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+textarea {
+    resize: none;
+    display: block;
 }
 
 .sub-pane-text {
-    display: inline-block;
+    height: 100%;
+    display: flex;
+    align-items: center;
     width: 50%;
 }
 
+.sub-pane-text > * {
+    margin: 0 auto;
+    width: 80%;
+    height: 80%;
+    padding: 3rem;
+    border: 1px solid grey;
+    background-color: white;
+}
+
 .sub-pane-editor {
-    // display: none;
+    background-color: lightblue;
 }
 
 .sub-pane-preview {
+    background-color: lightcoral;
 }
 
 #editor {
-    background-color: lightblue;
-    height: $pane-height-mobile;
+    // height: $pane-height-mobile;
+    // height: 100%;
 }
 
 #preview {
-    background-color: lightcoral;
-    height: $pane-height-mobile;
+    // height: $pane-height-mobile;
+    // height: 100%;
 }
 
 .sub-pane-button {
@@ -48,11 +68,43 @@ div[class*="slide-"] {
 }
 
 @keyframes slide-left {
-    from {  transform: translateX(0%); }
-    to { transform: translateX(-50%); }
+    from {  
+        transform: translateX(0%); 
+    }
+    to { 
+        transform: translateX(-50%); 
+    }
 }
 
 @keyframes slide-right {
-    from { transform: translateX(-50%); }
-    to { transform: translateX(0%); }
+    from { 
+        transform: translateX(-50%); 
+    }
+    to { 
+        transform: translateX(0%); 
+    }
+}
+
+@media (min-width: 1200px) {
+    #sliding-window {
+        width: 100%;
+    }
+
+    @keyframes slide-left {
+        from {  
+            width: 100%;
+        }
+        to { 
+            width: 200%;
+        }
+    }
+
+    @keyframes slide-right {
+        from { 
+            width: 200%;
+        }
+        to { 
+            width: 100%;
+        }
+    }
 }

@@ -9,7 +9,10 @@ class MainPane extends React.Component
             <div className="main-pane-wrapper">
                 <div id="sliding-window" className={this.props.windowPosition}>
                     <div className="sub-pane-text sub-pane-editor">
-                        <div id="editor">Editor</div>
+                        <textarea id="editor">
+                            Editor
+                            Hello world
+                        </textarea>
                     </div>
                     <div className="sub-pane-text sub-pane-preview">
                         <div id="preview">Preview</div>
