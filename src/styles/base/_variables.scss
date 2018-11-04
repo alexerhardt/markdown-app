@@ -1,3 +1,11 @@
 $navbar-height: 2.5rem;
 $toggle-button-height: 2.5rem;
 $pane-height-mobile: calc(100vh - #{$navbar-height} - #{$toggle-button-height});
+
+$text-pane-margin-top: 20%;
+$text-pane-margin-side: 20%;
+$text-pane-width: calc(100% - #{$text-pane-margin-top});
+$text-pane-height: calc(100% - #{$text-pane-margin-side});
+
+$sub-pane-preview-bg-color: lightcoral;
+$sub-pane-editor-bg-color: lightblue;

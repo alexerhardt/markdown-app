@@ -11,11 +11,6 @@
     align-items: center;
 }
 
-textarea {
-    resize: none;
-    display: block;
-}
-
 .sub-pane-text {
     height: 100%;
     display: flex;
@@ -25,29 +20,28 @@ textarea {
 
 .sub-pane-text > * {
     margin: 0 auto;
-    width: 80%;
-    height: 80%;
+    width: $text-pane-width;
+    height: $text-pane-height; 
     padding: 3rem;
     border: 1px solid grey;
     background-color: white;
 }
 
-.sub-pane-editor {
-    background-color: lightblue;
-}
-
-.sub-pane-preview {
-    background-color: lightcoral;
+.sub-pane-text > textarea {
+    resize: none;
+    display: block;
 }
 
 #editor {
-    // height: $pane-height-mobile;
-    // height: 100%;
+    max-width: 800px;
 }
 
-#preview {
-    // height: $pane-height-mobile;
-    // height: 100%;
+.sub-pane-editor {
+    background-color: $sub-pane-editor-bg-color;
+}
+
+.sub-pane-preview {
+    background-color: $sub-pane-preview-bg-color;
 }
 
 .sub-pane-button {
