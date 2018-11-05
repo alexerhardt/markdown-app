@@ -36,6 +36,10 @@
 
 #editor {
     max-width: $editor-max-width;
+} 
+
+#preview {
+    overflow-y: scroll;
 }
 
 .sub-pane-editor {

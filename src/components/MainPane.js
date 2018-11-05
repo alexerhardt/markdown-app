@@ -1,49 +1,13 @@
 import React from 'react';
-import ToggleButton from './ToggleButton';
+import Defaults from '../data/Defaults';
 const marked = require('marked');
-
-
-const defaultText = `
-# Welcome to tiny.md!
-
-tiny.md is a simple markdown editor and previewer made with React.
-
-## Features
-
-tiny.md supports all common Markdown tags.
-
-### Bulletpoints
-
-Make original lists with bulletpoints:
-
-* Item 1
-* Item 2
-* Item 3
-
-Never forget a thing again!
-
-### Code Inlining and Code Blocks
-
-You can inline code:
-
-\`console.log("World, hello!")\`
-
-And create code blocks:
-
-\`\`\`
-for(i = 0; i < 100; i++) {
-    console.log("World, hello!");
-}
-\`\`\`
-
-`
 
 class MainPane extends React.Component
 {
     FIRST_TIME = 1;
 
     state = {
-        editorValue: defaultText,
+        editorValue: Defaults.editorText,
     }
 
     createMarkup = (string) => {
@@ -95,24 +59,5 @@ const windowStates = {
 };
 MainPane.windowStates = windowStates;
 
-MainPane.defaultText = `
-    # Welcome to tiny.md!
-
-    tiny.md is a simple markdown editor and previewer made with React.
-
-    ## Features
-
-    tiny.md supports all common Markdown tags.
-
-    ### Bulletpoints
-
-    Make original lists with bulletpoints:
-
-    * Item 1
-    * Item 2
-    * Item 3
-    
-    Never forget a thing again!
-`
 
 export default MainPane;
